@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "339921331963",
+    "project_id": "zura-auth",
+    "storage_bucket": "zura-auth.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339921331963:android:19e90eac7a68314c0e725e",
+        "android_client_info": {
+          "package_name": "com.example.zura"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCspS9dh2Qv_IuhOonNu2OoofrdD6tdR4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

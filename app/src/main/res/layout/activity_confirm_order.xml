@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/order_confirmation_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zura_primary">
+
+    <!-- Zura Logo -->
+    <ImageView
+        android:id="@+id/zura_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/zura_logo"
+        android:contentDescription="Zura Logo"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/orderDetailsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:padding="12dp"
+        android:gravity="center"
+        android:text="Order Confirmation"
+        android:textColor="#FFFCFC"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/zura_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/orderDetailsText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Order Details -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order Details"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:padding="16dp" />
+
+            <!-- Autocomplete -->
+            <FrameLayout
+                android:id="@+id/autocomplete_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/priceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price: £0.00"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp" />
+
+            <!-- Payment method -->
+            <TextView
+                android:id="@+id/paymentText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment method: Card"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="12dp" />
+
+            <!-- Card Number -->
+            <EditText
+                android:id="@+id/card_number_input"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/lavender_border"
+                android:padding="12dp"
+                android:hint="xxxx-xxxx-xxxx-xxxx"
+                android:drawableLeft="@drawable/baseline_credit_card_24"
+                android:drawablePadding="8dp"
+                android:inputType="number"
+                android:textColor="@android:color/black"
+                android:textColorHint="#cccccc" />
+
+            <!-- Expiry & CVV -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/expiry_date_input"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/lavender_border"
+                    android:padding="12dp"
+                    android:hint="MM/YY"
+                    android:drawableLeft="@drawable/baseline_date_range_24"
+                    android:drawablePadding="8dp"
+                    android:inputType="text"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#cccccc" />
+
+                <EditText
+                    android:id="@+id/cvv_input"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/lavender_border"
+                    android:padding="12dp"
+                    android:hint="CVV"
+                    android:drawableLeft="@drawable/baseline_lock_24"
+                    android:drawablePadding="8dp"
+                    android:inputType="numberPassword"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#cccccc" />
+            </LinearLayout>
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/confirmBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Confirm Order"
+                android:textColor="@color/zura_primary"
+                android:backgroundTint="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

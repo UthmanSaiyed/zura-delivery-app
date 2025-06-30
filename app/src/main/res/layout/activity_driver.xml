@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zura_primary"
+    tools:context=".DriverActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/zura_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/zura_logo"
+        android:contentDescription="Zura Logo"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Welcome Message -->
+    <TextView
+        android:id="@+id/driverText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Welcome back, Driver!"
+        android:textColor="#FFFCFC"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/zura_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Available Orders Button -->
+    <Button
+        android:id="@+id/availableOrdersBtn"
+        android:layout_width="209dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@android:color/white"
+        android:text="Available Orders"
+        android:textColor="@color/zura_primary"
+        app:layout_constraintTop_toBottomOf="@id/driverText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Delivery History Button -->
+    <Button
+        android:id="@+id/deliveryHistoryBtn"
+        android:layout_width="209dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/white"
+        android:text="Delivery History"
+        android:textColor="@color/zura_primary"
+        app:layout_constraintTop_toBottomOf="@id/availableOrdersBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Manage Profile Button -->
+    <Button
+        android:id="@+id/manageProfileBtn"
+        android:layout_width="209dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/white"
+        android:text="Manage Profile"
+        android:textColor="@color/zura_primary"
+        app:layout_constraintTop_toBottomOf="@id/deliveryHistoryBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="209dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/white"
+        android:text="Logout"
+        android:textColor="@color/zura_primary"
+        app:layout_constraintTop_toBottomOf="@id/manageProfileBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
